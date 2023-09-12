@@ -1,0 +1,12 @@
+<!-- Utilizando two way data binding através de event binding -->
+<input
+  type="text"
+  value="{{ placeholder }}"
+  (input)="placeholder = $any($event.target).value"
+/>
+<p>{{ placeholder }}</p>
+
+<!-- Utilizando two way data banding através de diretivas angular -->
+<!-- O ngModel já serve para passar o value e também atualizar a propriedade do componente -->
+<input type="text" [(ngModel)]="placepass" />
+<p style.color="{{ color }}">{{ placepass }}</p>
